@@ -20,6 +20,7 @@ class NewClientWnd(widgets.Dialog) :
         mainLayout= self.setWidget( widgets.VLayout() )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Nom") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -70,6 +71,7 @@ class ConfigClientsWnd(widgets.Dialog) :
         mainLayout= self.setWidget( widgets.VLayout() )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Nom") )
         label.setFixedWidth(40)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -86,6 +88,7 @@ class ConfigClientsWnd(widgets.Dialog) :
         mainLayout.addSpacing(8)
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Addresse") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -93,6 +96,7 @@ class ConfigClientsWnd(widgets.Dialog) :
         self.m_adresse1= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChangeCB) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("CP, Ville") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)

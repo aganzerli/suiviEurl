@@ -21,6 +21,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         mainLayout= self.setWidget( widgets.VLayout() )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Nom") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -28,6 +29,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_nom= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Addresse") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -35,6 +37,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_adresse1= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("CP, Ville") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -44,6 +47,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         mainLayout.addSpacing(8)
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Capital") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -51,6 +55,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_capital= hLayout.addWidget( widgets.FloatEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Siren") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -58,6 +63,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_siren= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Siret") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -65,6 +71,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_siret= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("RCS numero") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -72,6 +79,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_numero_rcs= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("RCS ville") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -79,6 +87,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_ville_rcs= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("TVA intra") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -88,6 +97,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         mainLayout.addSpacing(8)
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("Banque") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -95,6 +105,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_banque= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("IBAN") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)
@@ -102,6 +113,7 @@ class ConfigEntrepriseWnd(widgets.Dialog) :
         self.m_iban= hLayout.addWidget( widgets.TextEdit(onChange= self._valueChange) )
 
         hLayout= mainLayout.addWidget( widgets.HLayout() )
+        hLayout.setFixedHeight(24)
         label= hLayout.addWidget( widgets.Label("BIC/SWIFT") )
         label.setFixedWidth(80)
         label.setAlignment(qt.ALIGNRIGHT|qt.ALIGNVCENTER)

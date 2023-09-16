@@ -418,6 +418,24 @@ class Year(BaseObject) :
                 self.setParam(tn+"_total", utils.roundUp(sum(parMois), 2))
                 self.setParam(tn+"_totalTtc", utils.roundUp(sum(parMoisTtc), 2))
 
+            if ( tn == "creances" ) and self.parent().getParam("factureno_auto") :
+                digit_permonth_max= [0]*len(MONTHS)
+                for c in table :
+                    factureno= c.getParam("factureno")
+
+                    if ( len(factureno) >= 2 ) :
+                        digit= factureno[-2:]
+                        if digit.isdigit() :
+                            date= c.getParam("date")
+                            digit_permonth_max[date.month]= max(digit_permonth_max[date.month], int(digit))
+
+                for c in table :
+                    if not c.getParam("factureno") :
+                        date= c.getParam("date")
+
+                        digit_permonth_max[date.month]+= 1
+                        c.setParam("factureno", "{0}{1:02d}".format(date.strftime("%y%m"), digit_permonth_max[date.month]))
+
     # ------------------------------------------------------------------------------------------------------------------------------
     def item(self, tableName, index) :
         item= None
@@ -530,7 +548,8 @@ class Database(BaseObject) :
             "clients" : [],
             "annees" : [],
             "intitule_default" : "Facture pour travaux de production",
-            "objet_default" : ""
+            "objet_default" : "",
+            "factureno_auto" : True
             }
 
     # ------------------------------------------------------------------------------------------------------------------------------

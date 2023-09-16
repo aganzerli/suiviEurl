@@ -5,6 +5,7 @@ from .layout import *
 from .scrollableLayout import *
 from .label import *
 from .button import *
+from .checkBox import *
 from .comboBox import *
 from .textEdit import *
 from .dateEdit import *
